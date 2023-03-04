@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clg-title {
+  border-radius: 1vh;
+  width: 40vh;
+}
+.img-wrapper {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.img-link {
+  min-width: 200px;
+}
+
+.img-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-img {
+  margin-left: 15%;
+  text-align: center;
+  width: 20vh;
+  opacity: 0.5;
+  transition: 1s ease;
+}
+
+.text {
+  text-align: center;
+}
+
+.event-img:hover {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+@media only screen and (max-width: 600px) {
+  .event-img {
+    opacity: 1;
+  }
+}

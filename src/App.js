@@ -18,11 +18,11 @@ function App() {
           path="/paperpresentation"
           element={<PaperPresentation />}
         />
-        <Route exact path="/paperpresentation" element={<CodeDebugging />} />
-        <Route exact path="/paperpresentation" element={<Quiz />} />
-        <Route exact path="/paperpresentation" element={<Memathon />} />
-        <Route exact path="/paperpresentation" element={<TestYourMemory />} />
-        <Route exact path="/paperpresentation" element={<ClickOnSpot />} />
+        <Route exact path="/codedebugging" element={<CodeDebugging />} />
+        <Route exact path="/quiz" element={<Quiz />} />
+        <Route exact path="/meme" element={<Memathon />} />
+        <Route exact path="/testyourmemory" element={<TestYourMemory />} />
+        <Route exact path="/clickonspot" element={<ClickOnSpot />} />
       </Routes>
     </>
   );

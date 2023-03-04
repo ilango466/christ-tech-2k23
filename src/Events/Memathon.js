@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import clg_title from "../images/clg-title.png";
+import ChristTech2K23 from "../images/ChristTech2K23.png";
 
 const Memathon = () => {
   const [header, setHeader] = useState([]);
   const [alldata, setAllData] = useState([]);
+  var count = 0;
 
   useEffect(() => {
     const getData = () => {
@@ -15,16 +18,17 @@ const Memathon = () => {
           .then((rep) => {
             const data_string = rep.substring(47).slice(0, -2);
             const raw_data = JSON.parse(data_string);
-
             const row_data = [];
-            const result = [];
+            const row_values = [];
 
-            raw_data.table.rows.forEach((col) => {
-              var current_row = [];
-              col.c.forEach((value) => {
-                current_row.push(value.v);
-              });
-              result.push(current_row);
+            raw_data.table.rows.forEach((row_c) => {
+              let current_row = [];
+              if (row_c.c[0] !== null) {
+                row_c.c.forEach((row_single_data) => {
+                  current_row.push(row_single_data.v);
+                });
+                row_values.push(current_row);
+              } else return false;
             });
 
             //   <<< HEADER >>>
@@ -37,7 +41,7 @@ const Memathon = () => {
 
             // End - HEADER
 
-            result.forEach((value) => {
+            row_values.forEach((value) => {
               let current_row = {};
               value.forEach((key, i) => {
                 current_row[header[i]] = key;
@@ -49,53 +53,56 @@ const Memathon = () => {
       } catch {}
     };
 
-    const myTimer = setInterval(() => {
-      getData();
-    }, 1000);
+    // const myTimer = setInterval(() => {
+    //   getData();
+    // }, 1000);
+    getData();
 
     return () => {
-      clearInterval(myTimer);
+      // clearInterval(myTimer);
     };
-  });
+  }, [header]);
   return (
     <>
-      <table className="table">
+      <div className="header">
+        <div>
+          <img className="clg-title" src={clg_title} />
+        </div>
+        <div>
+          <img className="clg-title" src={ChristTech2K23} />
+        </div>
+        <div>
+          <h3>MEME-A-THON</h3>
+        </div>
+      </div>
+      <table style={{ textAlign: "center" }} className="table">
         <thead>
           <tr>
-            {header.map((head_value, idx) => {
-              if (idx !== 0)
-                return (
-                  <th key={idx} scope="col">
-                    {head_value ? head_value : ""}
-                  </th>
-                );
-              else
-                return (
-                  <th key={idx} scope="col">
-                    {head_value ? head_value : ""}
-                  </th>
-                );
-            })}
+            <th style={{ width: "10%" }} scope="col">
+              Serial No
+            </th>
+            <th style={{ width: "20%" }}>Register Number</th>
+            <th style={{ width: "30%" }}>Student Name</th>
+            <th>College</th>
           </tr>
         </thead>
         <tbody>
           {alldata.map((k, idx) => {
-            return (
-              <tr key={idx}>
-                <th scope="row">{k.Register_No ? k.Register_No : ""}</th>
-
-                <td>{k.Name ? k.Name : ""}</td>
-                <td>{k.College ? k.College : ""}</td>
-                <td>{k.Technical ? k.Technical : ""}</td>
-                <td>{k.Non_Tech_1 ? k.Non_Tech_1 : ""}</td>
-                <td>{k.Non_Tech_2 ? k.Non_Tech_2 : ""}</td>
-              </tr>
-            );
+            if (k.Meme) {
+              return (
+                <tr key={idx}>
+                  <th scope="row">{++count}</th>
+                  <td>{k.Register_No ? k.Register_No : ""}</td>
+                  <td>{k.Name ? k.Name : ""}</td>
+                  <td>{k.College ? k.College : ""}</td>
+                </tr>
+              );
+            } else return null;
           })}
         </tbody>
       </table>
 
-      <Link to={"/event"}>Click me</Link>
+      <Link to={"/"}>Click me For Home</Link>
     </>
   );
 };
