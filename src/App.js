@@ -6,10 +6,10 @@ import Event from "./event";
 function App() {
   return (
     <>
-        <Routes>
-          <Route exact path="/" element={<Event />}></Route>
-          <Route path="/event" element={<Data />} />
-        </Routes>
+      <Routes>
+        <Route exact path="/" element={<Data />}></Route>
+        <Route path="/event" element={<Event />} />
+      </Routes>
     </>
   );
 }
