@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Data = () => {
+const PaperPresentation = () => {
   const [header, setHeader] = useState([]);
   const [alldata, setAllData] = useState([]);
 
@@ -48,7 +48,14 @@ const Data = () => {
           });
       } catch {}
     };
-    getData();
+
+    const myTimer = setInterval(() => {
+      getData();
+    }, 1000);
+
+    return () => {
+      clearInterval(myTimer);
+    };
   });
   return (
     <>
@@ -59,13 +66,13 @@ const Data = () => {
               if (idx !== 0)
                 return (
                   <th key={idx} scope="col">
-                    {head_value}{" "}
+                    {head_value ? head_value : ""}
                   </th>
                 );
               else
                 return (
                   <th key={idx} scope="col">
-                    {head_value}{" "}
+                    {head_value ? head_value : ""}
                   </th>
                 );
             })}
@@ -75,13 +82,13 @@ const Data = () => {
           {alldata.map((k, idx) => {
             return (
               <tr key={idx}>
-                <th scope="row">{k.Register_No}</th>
+                <th scope="row">{k.Register_No ? k.Register_No : ""}</th>
 
-                <td>{k.Name}</td>
-                <td>{k.College}</td>
-                <td>{k.Technical}</td>
-                <td>{k.Non_Tech_1}</td>
-                <td>{k.Non_Tech_2}</td>
+                <td>{k.Name ? k.Name : ""}</td>
+                <td>{k.College ? k.College : ""}</td>
+                <td>{k.Technical ? k.Technical : ""}</td>
+                <td>{k.Non_Tech_1 ? k.Non_Tech_1 : ""}</td>
+                <td>{k.Non_Tech_2 ? k.Non_Tech_2 : ""}</td>
               </tr>
             );
           })}
@@ -92,4 +99,4 @@ const Data = () => {
     </>
   );
 };
-export default Data;
+export default PaperPresentation;
