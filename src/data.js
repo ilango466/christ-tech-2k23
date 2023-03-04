@@ -5,52 +5,51 @@ const Data = () => {
   const [header, setHeader] = useState([]);
   const [alldata, setAllData] = useState([]);
 
-  const getData = () => {
-    try {
-      fetch(
-        "https://docs.google.com/spreadsheets/d/1jLYSARovCO_9AE-NtAG_EDLT4zZtLmkbtQQrY_ocHMA/gviz/tq?"
-      )
-        .then((res) => res.text())
-        .then((rep) => {
-          const data_string = rep.substring(47).slice(0, -2);
-          const raw_data = JSON.parse(data_string);
-
-          const row_data = [];
-          const result = [];
-
-          raw_data.table.rows.forEach((col) => {
-            var current_row = [];
-            col.c.forEach((value) => {
-              current_row.push(value.v);
-            });
-            result.push(current_row);
-          });
-
-          //   <<< HEADER >>>
-
-          const header_value = [];
-          raw_data.table.cols.forEach((col_name) => {
-            header_value.push(col_name.label);
-          });
-          setHeader(header_value);
-
-          // End - HEADER
-
-          result.forEach((value) => {
-            let current_row = {};
-            value.forEach((key, i) => {
-              current_row[header[i]] = key;
-            });
-            row_data.push(current_row);
-          });
-          setAllData(row_data);
-        });
-    } catch {}
-  };
-
   useEffect(() => {
+    const getData = () => {
+      try {
+        fetch(
+          "https://docs.google.com/spreadsheets/d/1jLYSARovCO_9AE-NtAG_EDLT4zZtLmkbtQQrY_ocHMA/gviz/tq?"
+        )
+          .then((res) => res.text())
+          .then((rep) => {
+            const data_string = rep.substring(47).slice(0, -2);
+            const raw_data = JSON.parse(data_string);
+
+            const row_data = [];
+            const result = [];
+
+            raw_data.table.rows.forEach((col) => {
+              var current_row = [];
+              col.c.forEach((value) => {
+                current_row.push(value.v);
+              });
+              result.push(current_row);
+            });
+
+            //   <<< HEADER >>>
+
+            const header_value = [];
+            raw_data.table.cols.forEach((col_name) => {
+              header_value.push(col_name.label);
+            });
+            setHeader(header_value);
+
+            // End - HEADER
+
+            result.forEach((value) => {
+              let current_row = {};
+              value.forEach((key, i) => {
+                current_row[header[i]] = key;
+              });
+              row_data.push(current_row);
+            });
+            setAllData(row_data);
+          });
+      } catch {}
+    };
     getData();
-  }, [getData]);
+  });
   return (
     <>
       <table className="table">
@@ -89,7 +88,7 @@ const Data = () => {
         </tbody>
       </table>
 
-      <Link to={"/event"}></Link>
+      <Link to={"/event"}>Click me</Link>
     </>
   );
 };
