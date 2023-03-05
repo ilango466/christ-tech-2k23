@@ -6,9 +6,9 @@
 }
 
 .clg-title {
-  border-radius: 1vh;
   width: 80vh;
 }
+
 .img-wrapper {
   margin-top: 5vh;
   display: flex;
@@ -48,5 +48,9 @@
 @media only screen and (max-width: 600px) {
   .event-img {
     opacity: 1;
+  }
+
+  .clg-title {
+    width: 40vh;
   }
 }
