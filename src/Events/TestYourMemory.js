@@ -72,7 +72,7 @@ const TestYourMemory = () => {
           <img className="clg-title" src={ChristTech2K23} />
         </div>
         <div>
-          <h3>PAPER PRESENTATION</h3>
+          <h3>TEST YOUR MEMORY</h3>
         </div>
       </div>
       <table style={{ textAlign: "center" }} className="table">
