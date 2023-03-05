@@ -55,7 +55,7 @@ const Event = () => {
             </div>
           </div>
           <div className="img-panel">
-            <Link to={"/meme"} className="img-link">
+            <Link to={"/codedebugging"} className="img-link">
               <img className="event-img shadow" src={codedebugging} alt="" />
             </Link>
             <div className="text">
