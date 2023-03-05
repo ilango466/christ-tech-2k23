@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/christ-tech-2k23/static/css/main.5ef8c607.css",
-    "main.js": "/christ-tech-2k23/static/js/main.c5105b6d.js",
+    "main.css": "/christ-tech-2k23/static/css/main.cee54276.css",
+    "main.js": "/christ-tech-2k23/static/js/main.1d0c7868.js",
     "static/js/787.d65830cd.chunk.js": "/christ-tech-2k23/static/js/787.d65830cd.chunk.js",
     "static/media/memeathon.png": "/christ-tech-2k23/static/media/memeathon.4204098f1037f20d2f71.png",
     "static/media/clickonspot.jpg": "/christ-tech-2k23/static/media/clickonspot.f7409dbf134b554cf8a0.jpg",
-    "static/media/clg-title.png": "/christ-tech-2k23/static/media/clg-title.75512bedec1a05f2e378.png",
+    "static/media/clg-title.png": "/christ-tech-2k23/static/media/clg-title.99ab121db237566b6eb9.png",
     "static/media/paperpresentation.jpg": "/christ-tech-2k23/static/media/paperpresentation.031e72641ce7f6f9a617.jpg",
     "static/media/codedebugging.jpg": "/christ-tech-2k23/static/media/codedebugging.a66ff77f398e3f997c8d.jpg",
     "static/media/testyourmemory.jpg": "/christ-tech-2k23/static/media/testyourmemory.3ca300a534d57f487693.jpg",
     "static/media/ChristTech2K23.png": "/christ-tech-2k23/static/media/ChristTech2K23.2f712d860cac0a9f7ff8.png",
     "static/media/quiz.jpg": "/christ-tech-2k23/static/media/quiz.dcbb3b5b5e401f4823d9.jpg",
     "index.html": "/christ-tech-2k23/index.html",
-    "main.5ef8c607.css.map": "/christ-tech-2k23/static/css/main.5ef8c607.css.map",
-    "main.c5105b6d.js.map": "/christ-tech-2k23/static/js/main.c5105b6d.js.map",
+    "main.cee54276.css.map": "/christ-tech-2k23/static/css/main.cee54276.css.map",
+    "main.1d0c7868.js.map": "/christ-tech-2k23/static/js/main.1d0c7868.js.map",
     "787.d65830cd.chunk.js.map": "/christ-tech-2k23/static/js/787.d65830cd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ef8c607.css",
-    "static/js/main.c5105b6d.js"
+    "static/css/main.cee54276.css",
+    "static/js/main.1d0c7868.js"
   ]
 }
