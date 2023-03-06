@@ -6,7 +6,7 @@ import ChristTech2K23 from "../images/ChristTech2K23.png";
 const PaperPresentation = () => {
   const [header, setHeader] = useState([]);
   const [alldata, setAllData] = useState([]);
-  var count=0
+  var count = 0;
 
   useEffect(() => {
     const getData = () => {
@@ -25,7 +25,9 @@ const PaperPresentation = () => {
               let current_row = [];
               if (row_c.c[0] !== null) {
                 row_c.c.forEach((row_single_data) => {
-                  current_row.push(row_single_data.v);
+                  if (row_single_data !== null) {
+                    current_row.push(row_single_data.v);
+                  }
                 });
                 row_values.push(current_row);
               } else return false;
@@ -88,7 +90,7 @@ const PaperPresentation = () => {
         </thead>
         <tbody>
           {alldata.map((k, idx) => {
-            if (k.Papper_Presentation) {
+            if (k.Papper_Presentation && k.Name !== "") {
               return (
                 <tr key={idx}>
                   <th scope="row">{++count}</th>

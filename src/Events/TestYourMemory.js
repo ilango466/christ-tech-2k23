@@ -25,7 +25,9 @@ const TestYourMemory = () => {
               let current_row = [];
               if (row_c.c[0] !== null) {
                 row_c.c.forEach((row_single_data) => {
-                  current_row.push(row_single_data.v);
+                  if (row_single_data !== null) {
+                    current_row.push(row_single_data.v);
+                  }
                 });
                 row_values.push(current_row);
               } else return false;
