@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/christ-tech-2k23/static/css/main.975d4b03.css",
-    "main.js": "/christ-tech-2k23/static/js/main.1d0c7868.js",
+    "main.js": "/christ-tech-2k23/static/js/main.7419a0aa.js",
     "static/js/787.d65830cd.chunk.js": "/christ-tech-2k23/static/js/787.d65830cd.chunk.js",
     "static/media/memeathon.png": "/christ-tech-2k23/static/media/memeathon.4204098f1037f20d2f71.png",
     "static/media/clickonspot.jpg": "/christ-tech-2k23/static/media/clickonspot.f7409dbf134b554cf8a0.jpg",
@@ -13,11 +13,11 @@
     "static/media/quiz.jpg": "/christ-tech-2k23/static/media/quiz.dcbb3b5b5e401f4823d9.jpg",
     "index.html": "/christ-tech-2k23/index.html",
     "main.975d4b03.css.map": "/christ-tech-2k23/static/css/main.975d4b03.css.map",
-    "main.1d0c7868.js.map": "/christ-tech-2k23/static/js/main.1d0c7868.js.map",
+    "main.7419a0aa.js.map": "/christ-tech-2k23/static/js/main.7419a0aa.js.map",
     "787.d65830cd.chunk.js.map": "/christ-tech-2k23/static/js/787.d65830cd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.975d4b03.css",
-    "static/js/main.1d0c7868.js"
+    "static/js/main.7419a0aa.js"
   ]
 }
