@@ -68,10 +68,10 @@ const Memathon = () => {
     <>
       <div className="header">
         <div>
-          <img className="clg-title" src={clg_title} />
+          <img className="clg-title" src={clg_title} alt="Nil" />
         </div>
         <div>
-          <img className="clg-title" src={ChristTech2K23} />
+          <img className="clg-title" src={ChristTech2K23} alt="Nil" />
         </div>
         <div>
           <h3>MEME-A-THON</h3>
@@ -86,6 +86,7 @@ const Memathon = () => {
             <th style={{ width: "20%" }}>Register Number</th>
             <th style={{ width: "30%" }}>Student Name</th>
             <th>College</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -97,6 +98,14 @@ const Memathon = () => {
                   <td>{k.Register_No ? k.Register_No : ""}</td>
                   <td>{k.Name ? k.Name : ""}</td>
                   <td>{k.College ? k.College : ""}</td>
+                  <td>
+                    <Link
+                      className="btn btn-primary btn-sm"
+                      to={"/details/meme-" + k.Register_No}
+                    >
+                      View Details
+                    </Link>
+                  </td>
                 </tr>
               );
             } else return null;
@@ -104,7 +113,11 @@ const Memathon = () => {
         </tbody>
       </table>
 
-      <Link to={"/"}>Click me For Home</Link>
+      <div className="text-center m-3">
+        <Link className="home-btn btn btn-outline-info " to={"/"}>
+          Click me For Home
+        </Link>
+      </div>
     </>
   );
 };

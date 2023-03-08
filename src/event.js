@@ -15,32 +15,37 @@ const Event = () => {
       <div className="container">
         <div className="header">
           <div>
-            <img className="clg-title" src={clg_title} />
+            <img className="clg-title" src={clg_title} alt="Nil" />
           </div>
           <div>
-            <img className="clg-title" src={ChristTech2K23} />
+            <img className="clg-title" src={ChristTech2K23} alt="Nil" />
           </div>
         </div>
         <div className="img-wrapper">
           <div className="img-panel">
             <Link to={"/paperpresentation"} className="img-link">
-              <img className="event-img shadow" src={pp} alt="" />
+              <img className="event-img shadow" src={pp} alt="Nil" />
             </Link>
             <div className="text">
               <h5>Paper Presentation</h5>
             </div>
           </div>
           <div className="img-panel">
-            <Link to={"/quiz"} className="img-link">
-              <img className="event-img shadow" src={quiz} alt="" />
+            <Link to={"/codedebugging"} className="img-link">
+              <img className="event-img shadow" src={codedebugging} alt="Nil" />
             </Link>
             <div className="text">
-              <h5>Quiz</h5>
+              <h5>code Debugging</h5>
             </div>
           </div>
+
           <div className="img-panel">
             <Link to={"/testyourmemory"} className="img-link">
-              <img className="event-img shadow" src={testyourmemory} alt="" />
+              <img
+                className="event-img shadow"
+                src={testyourmemory}
+                alt="Nil"
+              />
             </Link>
             <div className="text">
               <h5>Test Your Brain</h5>
@@ -48,23 +53,23 @@ const Event = () => {
           </div>
           <div className="img-panel">
             <Link to={"/clickonspot"} className="img-link">
-              <img className="event-img shadow" src={clickonspot} alt="" />
+              <img className="event-img shadow" src={clickonspot} alt="Nil" />
             </Link>
             <div className="text">
               <h5>Click On Spot</h5>
             </div>
           </div>
           <div className="img-panel">
-            <Link to={"/codedebugging"} className="img-link">
-              <img className="event-img shadow" src={codedebugging} alt="" />
+            <Link to={"/quiz"} className="img-link">
+              <img className="event-img shadow" src={quiz} alt="Nil" />
             </Link>
             <div className="text">
-              <h5>code Debugging</h5>
+              <h5>Quiz Master</h5>
             </div>
           </div>
           <div className="img-panel">
             <Link to={"/meme"} className="img-link">
-              <img className="event-img shadow" src={memeathon} alt="" />
+              <img className="event-img shadow" src={memeathon} alt="Nil" />
             </Link>
             <div className="text">
               <h5>Meme-A-Thon</h5>

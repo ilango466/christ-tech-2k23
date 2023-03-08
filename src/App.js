@@ -7,6 +7,7 @@ import CodeDebugging from "./Events/CodeDebugging";
 import Memathon from "./Events/Memathon";
 import TestYourMemory from "./Events/TestYourMemory";
 import Event from "./event";
+import Details from "./details";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/meme" element={<Memathon />} />
         <Route exact path="/testyourmemory" element={<TestYourMemory />} />
         <Route exact path="/clickonspot" element={<ClickOnSpot />} />
+        <Route path="/details/:id" element={<Details/>} />
       </Routes>
     </>
   );
