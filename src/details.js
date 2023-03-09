@@ -30,13 +30,13 @@ const Details = () => {
               if (
                 row_c.c !== null &&
                 row_c.c[1] !== null &&
-                row_c.c[11].v === id
+                row_c.c.at(-1).v === id
               ) {
-                console.log(row_c.c[11].v);
                 row_c.c.forEach((row_single_data) => {
                   if (row_single_data !== null) {
                     row_values.push(row_single_data.v);
                   }
+                  else row_values.push("Nil")
                 });
               } else return false;
             });
@@ -61,7 +61,7 @@ const Details = () => {
     return () => {
       // clearInterval(myTimer);
     };
-  },[id]);
+  }, [id]);
 
   return (
     <>
